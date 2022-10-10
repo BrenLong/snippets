@@ -3,7 +3,7 @@
 {% comment %} Add the following to footer.liquid {% endcomment %}
 {%- when 'image_with_custom_text' -%}
 
-    {%- if block.settings.button_label != "" -%}
+    {%- if block.settings.custom-text != "" -%}
       <div class="footer-block__details-content rte">
         {{ block.settings.custom-text }}
       </div>
@@ -48,7 +48,7 @@
         "label": "t:theme_support.settings.image_with_custom_text.image_label"
       }
     ]
-  },
+},
 
 {% comment %} Add to the relevant locale file {% endcomment %}
 "theme_support": {
