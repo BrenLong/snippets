@@ -1,6 +1,33 @@
-{% comment %} Adds a new block with a text, text block and image to the footer. Can be adapted for other sections. {% endcomment %}
+# Adds a new block with a text, text block and image to the footer.
+## Can be adapted for other sections. 
 
-{% comment %} Add the following to footer.liquid {% endcomment %}
+**Theme**: 2.0 - Crave
+**Version**: Worked in 4.0.1
+
+
+???+ notes
+    - This is a modified version of a new block that was used to create a button and image
+
+---
+
+## Before
+
+=== "None"
+
+
+## After
+
+=== "Footer"
+
+    ![XXXX](https://screenshot.click/11-09-18bqo-etq17.png)
+
+---
+
+### Step 1
+
+Paste the following in the `{%- case block.type -%}` section of the footer.liquid section
+
+```liquid
 {%- when 'image_with_custom_text' -%}
 
     {%- if block.settings.custom-text != "" -%}
@@ -25,9 +52,13 @@
         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
       {%- endif -%}
     </div>
+```
 
+### Step 2
 
-{% comment %} Add in the block schema {% endcomment %}
+Add in the block schema
+
+```liquid
 {
     "type": "image_with_custom_text",
     "name": "Image with text",
@@ -49,8 +80,12 @@
       }
     ]
 },
+```
 
-{% comment %} Add to the relevant locale file {% endcomment %}
+### Step 3
+
+Add to the relevant locale file
+
 "theme_support": {
     "settings": {
       "image_with_custom_text": {
