@@ -85,7 +85,7 @@ Add in the block schema
 ### Step 3
 
 Add to the relevant locale file
-
+```
 "theme_support": {
     "settings": {
       "image_with_custom_text": {
@@ -95,3 +95,4 @@ Add to the relevant locale file
       }
     }
   }
+```
