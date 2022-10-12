@@ -27,7 +27,7 @@
 
 Paste the following in the `{%- case block.type -%}` section of the footer.liquid section
 
-```liquid
+```
 {%- when 'image_with_custom_text' -%}
 
     {%- if block.settings.custom-text != "" -%}
@@ -58,7 +58,7 @@ Paste the following in the `{%- case block.type -%}` section of the footer.liqui
 
 Add in the block schema
 
-```liquid
+```
 {
     "type": "image_with_custom_text",
     "name": "Image with text",
